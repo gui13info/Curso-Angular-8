@@ -12,6 +12,10 @@ export class CadastroFilmesComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) { }
 
+  public get form() {
+    return this.cadastro.controls;
+  }
+
   public ngOnInit() {
 
     this.cadastro = this.formBuilder.group({
@@ -26,6 +30,7 @@ export class CadastroFilmesComponent implements OnInit {
   }
 
   public salvar(): void{
+    this.cadastro.markAllAsTouched();
     if(this.cadastro.invalid){
       return;   
     }
