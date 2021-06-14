@@ -13,22 +13,19 @@
           />
           <mat-error 
             *ngIf="(cadastro.touched || cadastro.dirty) 
-              && form.titulo.errors
-              && form.titulo.errors.required"
+              && form.titulo.errors?.required"
           >
             Campo Obrigatório.
           </mat-error>
           <mat-error 
-            *ngIf="(cadastro.touched || cadastro.dirty) 
-              && form.titulo.errors
-              && form.titulo.errors.minlength"
+            *ngIf="(cadastro.touched || cadastro.dirty)
+              && form.titulo.errors?.minlength"
           >
             Campo precisa ter no mínimo 2 caracteres.
           </mat-error>
           <mat-error 
-            *ngIf="(cadastro.touched || cadastro.dirty) 
-              && form.titulo.errors
-              && form.titulo.errors.maxlength"
+            *ngIf="(cadastro.touched || cadastro.dirty)
+              && form.titulo.errors?.maxlength"
           >
             Campo pode ter no máximo 256 caracteres.
           </mat-error>
@@ -43,9 +40,8 @@
             formControlName="urlFoto"
            />
            <mat-error 
-            *ngIf="(cadastro.touched || cadastro.dirty) 
-              && form.urlFoto.errors
-              && form.urlFoto.errors.minlength"
+            *ngIf="(cadastro.touched || cadastro.dirty)
+              && form.urlFoto.errors?.minlength"
           >
             Campo precisa ter no mínimo 10 caracteres.
           </mat-error>
@@ -63,9 +59,8 @@
             (click)="picker.open()"
           />
           <mat-error 
-            *ngIf="(cadastro.touched || cadastro.dirty) 
-              && form.dtLancamento.errors
-              && form.dtLancamento.errors.required"
+            *ngIf="(cadastro.touched || cadastro.dirty)
+              && form.dtLancamento.errors?.required"
           >
             Campo Obrigatório.
           </mat-error>
@@ -97,23 +92,20 @@
             formControlName="nota" 
           />
           <mat-error 
-            *ngIf="(cadastro.touched || cadastro.dirty) 
-              && form.nota.errors
-              && form.nota.errors.required"
+            *ngIf="(cadastro.touched || cadastro.dirty)
+              && form.nota.errors?.required"
           >
             Campo Obrigatório.
           </mat-error>
           <mat-error 
-            *ngIf="(cadastro.touched || cadastro.dirty) 
-              && form.nota.errors
-              && form.nota.errors.min"
+            *ngIf="(cadastro.touched || cadastro.dirty)
+              && form.nota.errors?.min"
           >
             Campo precisa ter no mínimo o valor 0.
           </mat-error>
           <mat-error 
-            *ngIf="(cadastro.touched || cadastro.dirty) 
-              && form.nota.errors
-              && form.nota.errors.max"
+            *ngIf="(cadastro.touched || cadastro.dirty)
+              && form.nota.errors?.max"
           >
             Campo pode ter no máximo o valor 10.
           </mat-error>
@@ -128,9 +120,8 @@
             formControlName="urlIMDb" 
           />
           <mat-error 
-            *ngIf="(cadastro.touched || cadastro.dirty) 
-              && form.urlIMDb.errors
-              && form.urlIMDb.errors.minlength"
+            *ngIf="(cadastro.touched || cadastro.dirty)
+              && form.urlIMDb.errors?.minlength"
           >
             Campo precisa ter no mínimo 10 caracteres.
           </mat-error>
@@ -145,9 +136,8 @@
             <mat-option value="Terror">Terror</mat-option>
           </mat-select>
           <mat-error 
-            *ngIf="(cadastro.touched || cadastro.dirty) 
-              && form.genero.errors
-              && form.genero.errors.required"
+            *ngIf="(cadastro.touched || cadastro.dirty)
+              && form.genero.errors?.required"
           >
             Campo Obrigatório.
           </mat-error>
