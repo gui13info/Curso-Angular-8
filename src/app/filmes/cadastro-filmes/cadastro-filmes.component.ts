@@ -11,6 +11,7 @@ import { ValidarCamposService } from 'src/app/shared/components/campos/validar-c
 export class CadastroFilmesComponent implements OnInit {
 
   public cadastro: FormGroup;
+  public generos: Array<string>;
 
   constructor(
     public validacao: ValidarCamposService,
@@ -22,7 +23,6 @@ export class CadastroFilmesComponent implements OnInit {
   }
 
   public ngOnInit() {
-
     this.cadastro = this.formBuilder.group({
       titulo: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(256)]],
       urlFoto: ['', Validators.minLength(10)],
@@ -32,6 +32,8 @@ export class CadastroFilmesComponent implements OnInit {
       urlIMDb: ['', Validators.minLength(10)],
       genero: ['', [Validators.required]]
     });
+
+    this.generos = ['Ação', 'Romance', 'Aventura', 'Terror', 'Ficção cientifica', 'Comédia', 'Aventura', 'Drama'];
   }
 
   public salvar(): void{

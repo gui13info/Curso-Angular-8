@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup, AbstractControl } from '@angular/forms';
+
 import { ValidarCamposService } from '../validar-campos.service';
 
 @Component({
