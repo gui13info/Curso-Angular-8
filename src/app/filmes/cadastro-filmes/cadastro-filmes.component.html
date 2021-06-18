@@ -2,6 +2,8 @@
 <div class="main-div">
   <mat-card class="center width50">
     <form 
+      autocomplete="off"
+      novalidate
       [formGroup]="cadastro" 
       (ngSubmit)="salvar()" 
       (ngReset)="reiniciarForm()"
