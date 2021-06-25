@@ -1,26 +1,28 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Alerta } from '../../models/alerta';
+import { Component, OnInit, Inject } from "@angular/core";
+import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
+
+import { Alerta } from "../../models/alerta";
 
 @Component({
-  selector: 'dio-alerta',
-  templateUrl: './alerta.component.html',
-  styleUrls: ['./alerta.component.css']
+  selector: "dio-alerta",
+  templateUrl: "./alerta.component.html",
+  styleUrls: ["./alerta.component.css"],
 })
 export class AlertaComponent implements OnInit {
-
   alerta = {
-    titulo: 'Sucesso!',
-    descricao: 'Seu registro foi cadastrado com sucesso!',
-    btnSucesso: 'OK',
-    btnCancelar: 'Cancelar',
-    corBtnSucesso: 'accent',
-    corBtnCancelar: 'warn',
+    titulo: "Sucesso!",
+    descricao: "Seu registro foi cadastrado com sucesso!",
+    btnSucesso: "OK",
+    btnCancelar: "Cancelar",
+    corBtnSucesso: "accent",
+    corBtnCancelar: "warn",
     possuirBtnFechar: false
   } as Alerta;
 
-  constructor(public dialogRef: MatDialogRef<AlertaComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: Alerta) { }
+  constructor(
+    public dialogRef: MatDialogRef<AlertaComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Alerta
+  ) {}
 
   ngOnInit() {
     if (this.data) {
